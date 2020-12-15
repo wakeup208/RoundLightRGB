@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_background_fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/_background_fragment"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_background_fragment"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.edgeround.lightingcolors.rgb.views.SwipeViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:swipe_enable="false" />
+
+                <LinearLayout
+                    android:id="@+id/linear_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_margin="@dimen/_32sdp"
+                    android:background="@drawable/custom_background_tablayout"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linear_tab_home"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_tab_home"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/ic_home_ac" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_tab_theme"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_tab_theme"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/ic_theme" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_tab_settings"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/img_settings"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:padding="@dimen/_8sdp"
+                            android:src="@drawable/ic_setting" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>
